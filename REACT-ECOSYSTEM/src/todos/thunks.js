@@ -52,7 +52,7 @@ export const updateTodoRequst = id => async dispatch => {
             },
             method: 'post',
         })
-        const completedTodo = response.json();
+        const completedTodo = await response.json();
         dispatch(markTodoAsComplete(completedTodo));
     } catch(e) {
         
